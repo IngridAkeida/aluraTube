@@ -12,10 +12,17 @@ function HomePage() {
     backgroundColor: '#254658', 
     color:'#fff',
   };
+
+  const bgHeader = { 
+    backgroundColor: '#ccc', 
+    color:'#000',
+  };
+
+  
   return (
     <>
       <div style={bgIndex}>{msg}</div>
-      <div>
+      <div style={bgHeader}>
         <Header/>
         <Timeline/>
         <Menu/>
@@ -63,10 +70,12 @@ function Header2() {
 
       <section className='user-info'>
         <img src={`https://github.com/${config.github}.png`}/>
-        <h2>{config.name}</h2>
-        {config.job}
+        <div>
+          <h2>{config.name}</h2>
+          <p>{config.job}</p>
+        </div>
       </section>  
-      
+
     </StyledHeader>
   );
 }
