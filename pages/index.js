@@ -30,7 +30,6 @@ function HomePage() {
         <Header/>
         <Timeline/>
         <Menu/>
-        <Menu2/>
         <Header2/>
         <Timeline2 lists={config.playlists}/>
       </div>
@@ -39,16 +38,6 @@ function HomePage() {
 }
 
 export default HomePage
-
-//ou posso fazer assim
-
-function Menu2() {
-  return (
-    <div>
-      Menu2
-    </div>
-  );
-}
 
 // bloco header
 
