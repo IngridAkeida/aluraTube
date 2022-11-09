@@ -3,6 +3,7 @@ import Menu from './components/Menu/index';
 import Timeline from './components/Timeline/index';
 import config from '../config.json';
 import styled from 'styled-components';
+import { CSSReset } from './components/CSSreset';
 
 function HomePage() {
 
@@ -23,6 +24,7 @@ function HomePage() {
 
   return (
     <>
+      <CSSReset/>
       <div style={bgIndex}>{msg}</div>
       <div style={bgHeader}>
         <Header/>
