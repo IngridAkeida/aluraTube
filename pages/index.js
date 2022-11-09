@@ -88,21 +88,33 @@ function Timeline2(props) {
 
   return (
     <div>
+
       {playlistNames.map((playlistName)=>{
+        
         const videos = props.lists[playlistName];
         //console.log(videos);
 
-        return /*"Item atual" no caso playlistName*/ videos.map((video)=>{
-          return (
-            <a>
-              <img src={}/>
-              <span>
-                {video.title}
-              </span>
-            </a>
-          )
-        });
+        return /*"Item atual" no caso playlistName*/(
+          
+          <section>
+            <h2>{playlistName}</h2>
+            <div>
+              {videos.map((video)=>{
+                return (
+                  <a href={video.url}>
+                    <img src={video.thumb}/>
+                    <span>
+                      {video.title}
+                    </span>
+                  </a>
+                )
+              })}
+            </div>
+          </section>
+        );
+        
       })}
+
     </div>
   );
 }
