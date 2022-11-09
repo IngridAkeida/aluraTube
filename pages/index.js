@@ -1,9 +1,8 @@
 import Header from './components/Header/index';
 import Menu from './components/Menu/index';
 import Timeline from './components/Timeline/index';
-import config from '../config.json'
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
-
+import config from '../config.json';
+import styled from 'styled-components';
 
 function HomePage() {
 
@@ -40,14 +39,35 @@ function Menu2() {
   );
 }
 
+// bloco header
+
+const StyledHeader = styled.div`
+  img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 32px;
+    gap: 16px;
+  }
+`;
+
 function Header2() {
   return (
-    <div>
-      <img src='banner'/>
-      <img src={`https://github.com/${config.github}.png`}/>
-      {config.name}
-      {config.job}
-    </div>
+    <StyledHeader>
+      {/*<img src='banner'/>*/}
+
+      <section className='user-info'>
+        <img src={`https://github.com/${config.github}.png`}/>
+        <h2>{config.name}</h2>
+        {config.job}
+      </section>  
+      
+    </StyledHeader>
   );
 }
 
