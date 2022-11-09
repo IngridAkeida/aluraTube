@@ -1,5 +1,21 @@
 {
   "name": "Ingrid Sanches",
   "job": "Software Engineer",
-  "github":"IngridAkeida"
+  "github":"IngridAkeida",
+  "playlists":{
+    "Jogos": [
+      {
+        "title": "Algum título",
+        "url":"url",
+        "thumb":"thumbnail do vídeo"
+      }
+    ],
+    "Front-End": [
+      {
+        "title": "Algum título",
+        "url":"url",
+        "thumb":"thumbnail do vídeo"
+      }
+    ]
+  }
 }

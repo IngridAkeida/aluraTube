@@ -18,7 +18,9 @@ function HomePage() {
     color:'#000',
   };
 
-  
+  console.log(config.playlists);
+
+
   return (
     <>
       <div style={bgIndex}>{msg}</div>
@@ -28,7 +30,7 @@ function HomePage() {
         <Menu/>
         <Menu2/>
         <Header2/>
-        <Timeline2/>
+        <Timeline2 lists={config.playlists}/>
       </div>
     </>
   );
@@ -80,11 +82,22 @@ function Header2() {
   );
 }
 
-function Timeline2() {
+function Timeline2(props) {
+  console.log("dentro do componente", props.lists);
+  const playlistNames = Object.keys(props.lists);
+
   return (
     <div>
-      Timeline2
+      {playlistNames.map((playlistName)=>{
+        return /*"Item atual"*/ playlistName;
+      })}
     </div>
   );
 }
 
+/* SOBRE FUNCTIONS OU ARROW FUNCTIONS 
+{playlistNames.map((playlistName)=>{...
+ou
+{playlistNames.map(function(playlistName){...
+  MESMO RESULTADO
+*/
