@@ -49,6 +49,7 @@ const StyledHeader = styled.div`
     border-radius: 50%;
   }
   .user-info{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     width: 100%;
