@@ -24,7 +24,7 @@ const StyledMenu = styled.header`
   }
 `;
 
-export default function Menu() {
+function Menu() {
   return (
     <StyledMenu>
       <div>
@@ -33,6 +33,8 @@ export default function Menu() {
     </StyledMenu>
   );
 }
+
+export default Menu;
 
 function Logo() {
   return (
