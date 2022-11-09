@@ -5,14 +5,14 @@
   "playlists":{
     "Jogos": [
       {
-        "title": "Algum título",
+        "title": "Algum título1",
         "url":"url",
         "thumb":"thumbnail do vídeo"
       }
     ],
     "Front-End": [
       {
-        "title": "Algum título",
+        "title": "Algum título2",
         "url":"url",
         "thumb":"thumbnail do vídeo"
       }

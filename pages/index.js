@@ -18,7 +18,7 @@ function HomePage() {
     color:'#000',
   };
 
-  console.log(config.playlists);
+  //console.log(config.playlists);
 
 
   return (
@@ -83,13 +83,25 @@ function Header2() {
 }
 
 function Timeline2(props) {
-  console.log("dentro do componente", props.lists);
+  //console.log("dentro do componente", props.lists);
   const playlistNames = Object.keys(props.lists);
 
   return (
     <div>
       {playlistNames.map((playlistName)=>{
-        return /*"Item atual"*/ playlistName;
+        const videos = props.lists[playlistName];
+        //console.log(videos);
+
+        return /*"Item atual" no caso playlistName*/ videos.map((video)=>{
+          return (
+            <a>
+              <img src={}/>
+              <span>
+                {video.title}
+              </span>
+            </a>
+          )
+        });
       })}
     </div>
   );
