@@ -4,13 +4,13 @@ import Search from './components/Search/';
 
 
 
-function Menu() {
+function Menu({valorDoFiltro, setValorDoFiltro}) {
   return (
     <StyledMenu>
       <div>
         <Logo/>
       </div>
-      <Search/>
+      <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
     </StyledMenu>
   );
 }

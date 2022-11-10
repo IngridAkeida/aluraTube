@@ -1,7 +1,7 @@
 import StyledTimeline from './styled_component';
 
 
-function Timeline(props) {
+function Timeline({ searchValue, ...props }) {
   
   //console.log("dentro do componente", props.lists);
   
@@ -16,11 +16,12 @@ function Timeline(props) {
         //console.log(videos);
         return (
           
-          <section>
+          <section key={playlistName}>
             <h2>{playlistName}</h2>
             <div>
               {videos.filter((video) => {
-                return video.title.includes(valorDoFiltro);
+                const titleNormalized = 
+                return video.title.includes(searchValue);
               }).map((video)=>{
                 return (
                   <a href={video.url}>

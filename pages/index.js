@@ -2,6 +2,8 @@ import Header from '../src/components/Header';
 import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline';
 
+import React from 'react';
+
 import config from '../config.json';
 
 import { CSSReset } from '../src/components/CSSreset';
@@ -16,14 +18,10 @@ function HomePage() {
     color:'#fff',
   };*/
 
-  /*const bgHeader = { 
-    backgroundColor: '#ccc', 
-    color:'#000',
-  };*/
-
   //console.log(config.playlists);
 
-  const valorDoFiltro = 'frost';
+  const [valorDoFiltro, setValorDoFiltro] = React.useState("");
+
 
 
   return (
@@ -33,9 +31,9 @@ function HomePage() {
       {/*<div style={bgIndex}>{msg}</div>
       <div style={bgHeader}>*/}
   
-        <Menu/>
+        <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
         <Header/>
-        <Timeline lists={config.playlists}/>
+        <Timeline lists={config.playlists} searchValue={valorDoFiltro}/>
 
       </div>
     </>
