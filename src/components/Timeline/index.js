@@ -19,7 +19,9 @@ function Timeline(props) {
           <section>
             <h2>{playlistName}</h2>
             <div>
-              {videos.map((video)=>{
+              {videos.filter((video) => {
+                return video.title.includes(valorDoFiltro);
+              }).map((video)=>{
                 return (
                   <a href={video.url}>
                     <img src={video.thumb}/>
