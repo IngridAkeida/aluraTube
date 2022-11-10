@@ -1,4 +1,4 @@
-import { StyledMenu } from "styled-components";
+import StyledMenu from "./styled_component";
 import Logo from './Logo'
 
 
