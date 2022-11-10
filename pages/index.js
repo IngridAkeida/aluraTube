@@ -1,10 +1,10 @@
-import Header from './src/components/Header';
-import Menu from './src/components/Menu';
-import Timeline from './src/components/Timeline';
+import Header from '../src/components/Header';
+import Menu from '../src/components/Menu';
+import Timeline from '../src/components/Timeline';
 
 import config from '../config.json';
 
-import { CSSReset } from './src/components/CSSreset';
+import { CSSReset } from '../src/components/CSSreset';
 
 
 function HomePage() {
