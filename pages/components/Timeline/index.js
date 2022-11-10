@@ -1,11 +1,11 @@
 import StyledTimeline from './styled_component';
 
+
 function Timeline(props) {
   
   //console.log("dentro do componente", props.lists);
   
   const playlistNames = Object.keys(props.lists);
-
 
   return (
     <StyledTimeline>
@@ -14,8 +14,7 @@ function Timeline(props) {
         
         const videos = props.lists[playlistName];
         //console.log(videos);
-
-        return /*"Item atual" no caso playlistName*/(
+        return (
           
           <section>
             <h2>{playlistName}</h2>
