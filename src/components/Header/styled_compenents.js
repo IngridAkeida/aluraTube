@@ -3,11 +3,12 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
   .user-banner{
     position: absolute;
-    width: 1512px;
+    width: 100%;
     height: 230px;
     left: 0px;
     top: 56px;
-    background: url(https://marketplace.canva.com/EAENvjvVCss/1/0/1600w/canva-corporate-professional-linkedin-banner-b_h10Jq8DkA.jpg);
+    background-color: #ccc;
+    background-image: url(https://marketplace.canva.com/EAENvjvVCss/1/0/1600w/canva-corporate-professional-linkedin-banner-b_h10Jq8DkA.jpg);
   }
   
   .user-perfil{
