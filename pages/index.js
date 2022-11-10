@@ -26,7 +26,7 @@ function HomePage() {
 
   return (
     <>
-      <CSSReset />
+      
       <div>
       {/*<div style={bgIndex}>{msg}</div>
       <div style={bgHeader}>*/}
