@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledSwitch = styled.div`
   background-color: #333333;
   border: 0;

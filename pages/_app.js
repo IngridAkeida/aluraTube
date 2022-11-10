@@ -1,5 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import { CSSReset } from '../src/components/CSSreset';
+import ColorModeProvider from "../src/components/Menu/components/DarkModeSwitch/ColorMode";
 
 
 const theme = {
@@ -22,10 +23,12 @@ const theme = {
 function MyApp({ Component, pageProps }) {
 
   return (
-    <ThemeProvider theme={theme.dark}>
-      <CSSReset />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ColorModeProvider>
+      <ThemeProvider theme={theme.dark}>
+        <CSSReset />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ColorModeProvider>
 
   )
 }
