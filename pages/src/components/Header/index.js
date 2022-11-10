@@ -1,5 +1,5 @@
 import StyledHeader from './styled_compenents';
-import config from '../../../config.json';
+import config from '../../../../config.json';
 
 function Header() {
 
