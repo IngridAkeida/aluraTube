@@ -6,7 +6,7 @@ import React from 'react';
 
 import config from '../config.json';
 
-import { CSSReset } from '../src/components/CSSreset';
+
 
 
 function HomePage() {
