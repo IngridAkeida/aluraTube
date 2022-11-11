@@ -1,18 +1,19 @@
+import React from 'react';
 import { StyledRegisterVideo } from './styled_components';
 
 function RegisterVideo(){
-  // falta o botäo 
-  //modal
-  // form
-  // precisamos controlar o state
+  const [formVisivel, setFormVisivel] = React.useState(false);
+  
     return(
     <StyledRegisterVideo>
-      <button className='add-video'>
+      <button className='add-video' onClick={() => setFormVisivel(true)}>
         +
       </button>
-      <form>
+      {formVisivel 
+      ? (
+      <form >
         <div>
-          <button className='close-modal'>
+          <button className='close-modal' onClick={() => setFormVisivel(false)}>
             X
           </button>
         
@@ -23,6 +24,8 @@ function RegisterVideo(){
           </button>
         </div>
       </form>
+      ): 
+      false}
     </StyledRegisterVideo>
 
   )
