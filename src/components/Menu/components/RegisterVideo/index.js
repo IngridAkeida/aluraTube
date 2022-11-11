@@ -7,7 +7,9 @@ function RegisterVideo(){
   // precisamos controlar o state
     return(
     <StyledRegisterVideo>
-
+      <button className='add-video'>
+        +
+      </button>
     </StyledRegisterVideo>
 
   )
