@@ -21,6 +21,9 @@ function useForm(propsDoFrom){
           ...values,
           [name]: value,
         });
+      },
+      clearForm(){
+        setValues({});
       }
   };
 }
@@ -31,7 +34,7 @@ function RegisterVideo(){
   const [formVisivel, setFormVisivel] = React.useState(false);
 
   const formRegister = useForm({
-    initialValues: {titulo:"Suuuper vídeo", url:"Youtubiu"}
+    initialValues: {titulo:"", url:""}
   });
 
     return(
@@ -43,10 +46,17 @@ function RegisterVideo(){
       ? (
       <form onSubmit={(evento) => {
         evento.preventDefault();
+
+        // fechar aba 
+        setFormVisivel(false);
+        
+        //limpar form 
+        formRegister.clearForm();
       }}>
         <div>
 
           <button 
+          type='button'
           className='close-modal' 
           onClick={() => setFormVisivel(false)}
           >
