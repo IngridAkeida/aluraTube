@@ -7,11 +7,8 @@ function RegisterVideo(){
 
   // preencher os campos de título e url 
 
-  const [title, setTitle] = React.useState('');
-  const [url, setUrl] = React.useState('');
+  const [values, setValues] = React.useState({titulo:'', url:''});
 
-
-  
     return(
     <StyledRegisterVideo>
       <button className='add-video' onClick={() => setFormVisivel(true)}>
