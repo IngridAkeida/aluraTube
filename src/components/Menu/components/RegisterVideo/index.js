@@ -1,13 +1,29 @@
+import { ContrastDimensions } from '@styled-icons/foundation/Contrast';
 import React from 'react';
 import { StyledRegisterVideo } from './styled_components';
 
-function RegisterVideo(){
-  // deixar o form visível 
-  const [formVisivel, setFormVisivel] = React.useState(false);
+
+function useForm(propsDoFrom){
+
 
   // preencher os campos de título e url 
 
-  const [values, setValues] = React.useState({titulo:"", url:""});
+  const [values, setValues] = React.useState(propsDoFrom.initialValues);
+
+
+  return{
+    values, 
+  };
+}
+
+function RegisterVideo(){
+
+  // deixar o form visível 
+  const [formVisivel, setFormVisivel] = React.useState(false);
+
+  const formRegister = useForm({
+    initialValues: {titulo:"Suuuper vídeo", url:"Youtubiu"}
+  });
 
     return(
     <StyledRegisterVideo>
@@ -30,7 +46,7 @@ function RegisterVideo(){
 
           <input 
             placeholder='tirulo do video' 
-            value={values.titulo} 
+            value={formRegister.values.titulo} 
             onChange={(evento) => {
               const value = evento.target.value;
               console.log(value);
@@ -42,7 +58,7 @@ function RegisterVideo(){
           />
           <input 
             placeholder='URL' 
-            value={values.url}
+            value={formRegister.values.url}
             onChange={(evento) => {
               const value = evento.target.value;
               console.log(value);
