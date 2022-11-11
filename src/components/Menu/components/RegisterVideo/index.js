@@ -13,6 +13,15 @@ function useForm(propsDoFrom){
 
   return{
     values, 
+    handlechange:
+      (evento) => {
+        const value = evento.target.value;
+        const name = evento.target.name
+        setValues({
+          ...values,
+          [name]: value,
+        });
+      }
   };
 }
 
@@ -45,28 +54,16 @@ function RegisterVideo(){
           </button>
 
           <input 
-            placeholder='tirulo do video' 
+            placeholder='titulo do video' 
+            name='titulo'
             value={formRegister.values.titulo} 
-            onChange={(evento) => {
-              const value = evento.target.value;
-              console.log(value);
-              setValues({
-                ...values,
-                titulo: value,
-              });
-            }} 
+            onChange={formRegister.handlechange}
           />
           <input 
             placeholder='URL' 
+            name='url'
             value={formRegister.values.url}
-            onChange={(evento) => {
-              const value = evento.target.value;
-              console.log(value);
-              setValues({
-                ...values,
-                url: value,
-              });
-            }}
+            onChange={formRegister.handlechange}
           />
           <button type='submit' >
             Cadastrar
