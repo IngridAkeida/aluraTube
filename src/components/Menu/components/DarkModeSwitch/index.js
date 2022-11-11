@@ -4,6 +4,7 @@ import { ColorModeContext } from "./ColorMode";
 
 function DarkModeSwitch() {
   const contexto = React.useContext(ColorModeContext);
+  console.log("contexto dentro do DarkMode", contexto);
 
   return (
       <StyledSwitch>
