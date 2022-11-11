@@ -2,7 +2,15 @@ import React from 'react';
 import { StyledRegisterVideo } from './styled_components';
 
 function RegisterVideo(){
+  // deixar o form visível 
   const [formVisivel, setFormVisivel] = React.useState(false);
+
+  // preencher os campos de título e url 
+
+  const [title, setTitle] = React.useState('');
+  const [url, setUrl] = React.useState('');
+
+
   
     return(
     <StyledRegisterVideo>
