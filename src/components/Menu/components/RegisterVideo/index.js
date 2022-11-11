@@ -1,4 +1,3 @@
-import { ContrastDimensions } from '@styled-icons/foundation/Contrast';
 import React from 'react';
 import { StyledRegisterVideo } from './styled_components';
 
