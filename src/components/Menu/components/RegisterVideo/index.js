@@ -7,7 +7,7 @@ function RegisterVideo(){
 
   // preencher os campos de título e url 
 
-  const [values, setValues] = React.useState({titulo:'', url:''});
+  const [values, setValues] = React.useState({titulo:"", url:""});
 
     return(
     <StyledRegisterVideo>
@@ -16,15 +16,43 @@ function RegisterVideo(){
       </button>
       {formVisivel 
       ? (
-      <form >
+      <form onSubmit={(evento) => {
+        evento.preventDefault();
+      }}>
         <div>
-          <button className='close-modal' onClick={() => setFormVisivel(false)}>
+
+          <button 
+          className='close-modal' 
+          onClick={() => setFormVisivel(false)}
+          >
             X
           </button>
-        
-          <input placeholder='tirulo do video'/>
-          <input placeholder='URL'/>
-          <button type='submit'>
+
+          <input 
+            placeholder='tirulo do video' 
+            value={values.titulo} 
+            onChange={(evento) => {
+              const value = evento.target.value;
+              console.log(value);
+              setValues({
+                ...values,
+                titulo: value,
+              });
+            }} 
+          />
+          <input 
+            placeholder='URL' 
+            value={values.url}
+            onChange={(evento) => {
+              const value = evento.target.value;
+              console.log(value);
+              setValues({
+                ...values,
+                url: value,
+              });
+            }}
+          />
+          <button type='submit' >
             Cadastrar
           </button>
         </div>
