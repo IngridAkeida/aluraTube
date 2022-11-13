@@ -2,7 +2,7 @@ import Header from '../src/components/Header';
 import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import config from '../config.json';
 
@@ -16,26 +16,32 @@ const PROJECT_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(PROJECT_URL, PROJECT_KEY);
 console.log(supabase.from('video').insert());
 
-
-
-
 function HomePage() {
 
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
   const [playlists, setPlaylists] = React.useState({});
 
-  supabase.from('video')
+
+  React,useEffect(() =>{
+
+    supabase.from('video')
           .select('*')
           .then((dados) => {
     
             console.log(dados.data);
-            dados.data.forEach((video) =>{
-              playlists[video.playlist]?.push(video);
-            })
-            setPlaylists(playlists);
-            //playlists[dados.data.playlist].push()
-  });
 
+            const novasPlaylists = {...playlists};
+
+            dados.data.forEach((video) =>{
+              if(!novasPlaylists[video.playlist]){
+                novasPlaylists[video.playlist] = [];
+              }
+              novasPlaylists[video.playlist].push(video);
+            })
+            setPlaylists(novasPlaylists);
+            //playlists[dados.data.playlist].push()
+    }); 
+  }, []);
 
   return (
     <>
@@ -44,7 +50,7 @@ function HomePage() {
         display:"flex",
         flexDirection:"column",
         flex:1,
-        backgroundColor: "red",
+        //backgroundColor: "red",
       }}>
       {/*<div style={bgIndex}>{msg}</div>
       <div style={bgHeader}>*/}
