@@ -23,17 +23,14 @@ console.log(supabase.from('video').insert());
 
 function HomePage() {
 
-  //const msg = 'Bem vindo de volta!';
-
-  /*const bgIndex = { 
-    backgroundColor: '#254658', 
-    color:'#fff',
-  };*/
-
-  //console.log(config.playlists);
-
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
 
+  supabase.from('video')
+          .select('*')
+          .then((dados) => {
+    
+            console.log(dados.data);
+  })
 
 
   return (
