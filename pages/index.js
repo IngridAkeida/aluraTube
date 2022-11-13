@@ -8,8 +8,6 @@ import config from '../config.json';
 
 import { createClient } from '@supabase/supabase-js';
 
-
-
 // supabase
 
 const PROJECT_URL = 'https://fvlloyphzereqksbztrw.supabase.co';
@@ -24,19 +22,30 @@ console.log(supabase.from('video').insert());
 function HomePage() {
 
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
+  const [playlists, setPlaylists] = React.useState({});
 
   supabase.from('video')
           .select('*')
           .then((dados) => {
     
             console.log(dados.data);
-  })
+            dados.data.forEach((video) =>{
+              playlists[video.playlist]?.push(video);
+            })
+            setPlaylists(playlists);
+            //playlists[dados.data.playlist].push()
+  });
 
 
   return (
     <>
       
-      <div>
+      <div style={{
+        display:"flex",
+        flexDirection:"column",
+        flex:1,
+        backgroundColor: "red",
+      }}>
       {/*<div style={bgIndex}>{msg}</div>
       <div style={bgHeader}>*/}
   
