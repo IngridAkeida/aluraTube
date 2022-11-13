@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledRegisterVideo } from './styled_components';
-import { createClient } from '@supabase/supabase-js'
-
+import { createClient } from '@supabase/supabase-js';
 
 function useForm(propsDoFrom){
 
@@ -37,6 +36,24 @@ const PROJECT_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(PROJECT_URL, PROJECT_KEY);
 console.log(supabase.from('video').insert());
 
+// recuperar a Thumb
+
+function getThambnail(url){
+  return `https://img.youtube.com/vi/${url.split('v=')[1]}/hqdefault.jpg`;
+}
+
+/*function getVideoId(url){
+  const videoId = url.split("v=")[1];
+  const ampersandPosition = videoId.indexOf("&");
+
+  if(ampersandPosition !== -1){
+    return videoId.substring( 0, ampersandPosition);
+  }
+
+  return videoId;
+
+}*/
+
 function RegisterVideo(){
 
   // deixar o form visível 
@@ -56,14 +73,19 @@ function RegisterVideo(){
       <form onSubmit={(evento) => {
         evento.preventDefault();
 
-        //inserindo dado
+        //inserindo dados
         supabase.from('video').insert({
-          title:"",
-          url:"",
-          thumb:"",
-          playlist:"",
+          title: formRegister.values.titulo ,
+          url:formRegister.values.url,
+          thumb: getThambnail(formRegister.values.url),
+          playlist:"jogos",
         })
-
+        .then((oqueveio) => {
+          console.log(oqueveio);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
 
         // fechar aba 
         setFormVisivel(false);
