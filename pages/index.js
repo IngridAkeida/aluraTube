@@ -7,8 +7,6 @@ import config from '../config.json';
 
 import React, { useEffect } from 'react';
 
-import { createClient } from '@supabase/supabase-js';
-
 function HomePage() {
 
   const service = videoService();
