@@ -4,6 +4,7 @@ import Timeline from '../src/components/Timeline';
 
 import React, { useEffect } from 'react';
 
+import { videoService } from "../src/services/videoService";
 import config from '../config.json';
 
 import { createClient } from '@supabase/supabase-js';
