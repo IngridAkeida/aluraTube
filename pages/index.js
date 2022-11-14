@@ -1,41 +1,33 @@
+import React from 'react';
 import Header from '../src/components/Header';
 import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline';
 
 import { videoService } from "../src/services/videoService"; 
-import config from '../config.json';
-
-import React, { useEffect } from 'react';
 
 function HomePage() {
 
-  const service = videoService();
-
+  const service = videoService;
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
   const [playlists, setPlaylists] = React.useState({});
 
 
-  React,useEffect(() =>{
+   React.useEffect(() =>{
+    service.getAll().then((dados) => {
+      console.log(dados.data);
 
-    supabase.from('video')
-          .select('*')
-          .then((dados) => {
-    
-            console.log(dados.data);
+      const novasPlaylists = {};
 
-            const novasPlaylists = {...playlists};
+        dados.data.forEach((video) => {
+            if(!novasPlaylists[video.playlist]) {
+              novasPlaylists[video.playlist] = [];
+            }
+              novasPlaylists[video.playlist].push(video);           
+        });
 
-            dados.data.forEach((video) =>{
-              if(!novasPlaylists[video.playlist]){
-                novasPlaylists[video.playlist] = [];
-              }
-              novasPlaylists[video.playlist].push(video);
-            })
-            setPlaylists(novasPlaylists);
-            //playlists[dados.data.playlist].push()
+        setPlaylists(novasPlaylists);
     }); 
   }, []);
-
   return (
     <>
       
@@ -50,7 +42,7 @@ function HomePage() {
   
         <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
         <Header/>
-        <Timeline lists={config.playlists} searchValue={valorDoFiltro}/>
+        <Timeline lists={playlists} searchValue={valorDoFiltro}/>
 
       </div>
     </>
