@@ -2,22 +2,16 @@ import Header from '../src/components/Header';
 import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline';
 
-import React, { useEffect } from 'react';
-
-import { videoService } from "../src/services/videoService";
+import { videoService } from "../src/services/videoService"; 
 import config from '../config.json';
+
+import React, { useEffect } from 'react';
 
 import { createClient } from '@supabase/supabase-js';
 
-// supabase
-
-const PROJECT_URL = 'https://fvlloyphzereqksbztrw.supabase.co';
-const PROJECT_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ2bGxveXBoemVyZXFrc2J6dHJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgzNDA3MzcsImV4cCI6MTk4MzkxNjczN30.b4i1YlX062UZxiEQMxltF5rAnbbLfHnc2Bi538f5xdQ';
-
-const supabase = createClient(PROJECT_URL, PROJECT_KEY);
-console.log(supabase.from('video').insert());
-
 function HomePage() {
+
+  const service = videoService();
 
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
   const [playlists, setPlaylists] = React.useState({});
