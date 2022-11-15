@@ -3,31 +3,33 @@ import Header from '../src/components/Header';
 import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline';
 
-import { videoService } from "../src/services/videoService"; 
+import { videoService } from "../src/Services/videoService"; 
 
-function HomePage() {
+export default function HomePage() {
 
-  const service = videoService;
+  const service = videoService();
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
   const [playlists, setPlaylists] = React.useState({});
 
+  React.useEffect(() => {
+    service
+        .getAllVideos()
+        .then((dados) => {
+            console.log(dados.data);
+            // Forma imutavel
+            const novasPlaylists = {};
+            dados.data.forEach((video) => {
+                if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                novasPlaylists[video.playlist] = [
+                    video,
+                    ...novasPlaylists[video.playlist],
+                ];
+            });
 
-   React.useEffect(() =>{
-    service.getAll().then((dados) => {
-      console.log(dados.data);
-
-      const novasPlaylists = {};
-
-        dados.data.forEach((video) => {
-            if(!novasPlaylists[video.playlist]) {
-              novasPlaylists[video.playlist] = [];
-            }
-              novasPlaylists[video.playlist].push(video);           
+            setPlaylists(novasPlaylists);
         });
-
-        setPlaylists(novasPlaylists);
-    }); 
   }, []);
+
   return (
     <>
       
@@ -48,6 +50,4 @@ function HomePage() {
     </>
   );
 }
-
-export default HomePage;
 

@@ -38,9 +38,13 @@ function MyApp({ Component, pageProps }) {
   return (
     
       <ThemeProvider theme={theme[contexto.mode]}>
+
         <CSSReset />
+
         <Component {...pageProps} />
+
         <RegisterVideo/>
+        
       </ThemeProvider>
     
 
