@@ -5,7 +5,7 @@ function Timeline({ searchValue, ...props }) {
   
   //console.log("dentro do componente", props.lists);
   
-  const playlistNames = Object.keys(props.lists);
+  const playlistNames = Object.keys(props.playlists);
 
   return (
     <StyledTimeline>
