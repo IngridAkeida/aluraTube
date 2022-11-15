@@ -3,12 +3,8 @@ import { StyledRegisterVideo } from './styled_components';
 import { createClient } from '@supabase/supabase-js';
 
 function useForm(propsDoFrom){
-
-
   // preencher os campos de título e url 
-
   const [values, setValues] = React.useState(propsDoFrom.initialValues);
-
 
   return{
     values, 
@@ -26,7 +22,6 @@ function useForm(propsDoFrom){
       }
   };
 }
-
 
 // supabase
 
@@ -76,7 +71,7 @@ function RegisterVideo(){
         //inserindo dados
         supabase.from('video').insert({
           title: formRegister.values.titulo ,
-          url:formRegister.values.url,
+          url: formRegister.values.url,
           thumb: getThambnail(formRegister.values.url),
           playlist:"jogos",
         })

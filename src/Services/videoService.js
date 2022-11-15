@@ -6,7 +6,7 @@ const PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
 const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
 
 
-/*export function videoService(){
+export function videoService(){
     return {
         getAllVideos() {
             return supabase.from("video")
@@ -14,9 +14,9 @@ const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
                 .order("created_at", { ascending: false });
         }
     }
-}*/
+}
 
-export function podcastService() {
+/*export function podcastService() {
     const databaseTable = 'podcasts'
   
     function insert(podcastToInsert) {
@@ -47,4 +47,4 @@ export function podcastService() {
     }
   
     return { insert, getAll, remove, observer }
-  }
+  }*/
