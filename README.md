@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-  <img src="./public/image/img-bg.png" alt="background" width="700" height="10" border-radius="50px"/>
+  <img src="./public/image/img-bg.png" alt="background" width="800" height="10" border-radius="50px"/>
 
   <h1 text-align="center">AluraTube</h1>
   
