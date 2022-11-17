@@ -1,7 +1,11 @@
 <br/>
-<p align="center">
-  <h1 align="center">AluraTube</h1>
-</p>
+<div align="center">
+  <img src="./public/image/img-bg.png" alt="background" width="700" height="10" border-radius="50px"/>
+
+  <h1 text-align="center">AluraTube</h1>
+  
+  <img src="./public/image/img-bg.png" alt="background" width="800" height="10"/>
+</div>
 
 ## About The Project
 
@@ -15,7 +19,7 @@ This incredible project was developed by [Mario Souto](https://github.com/omario
 
 
 <div align="center">
-<img src="https://media-exp1.licdn.com/dms/image/C4D22AQGxD-wsUiHuIA/feedshare-shrink_1280/0/1668674513177?e=1671667200&v=beta&t=NQVZY6mrlfdfV9W2xikJn1yg_jMYp83Kw_Q7pmtbYvs" alt="javascript" width="500" height="500"/>
+<img src="https://media-exp1.licdn.com/dms/image/C4D22AQGxD-wsUiHuIA/feedshare-shrink_1280/0/1668674513177?e=1671667200&v=beta&t=NQVZY6mrlfdfV9W2xikJn1yg_jMYp83Kw_Q7pmtbYvs" alt="print" width="500" height="500"/>
 </div>
 
 
