@@ -7,7 +7,7 @@
 
 ![Screen Shot](https://media-exp1.licdn.com/dms/image/C4D22AQGxD-wsUiHuIA/feedshare-shrink_1280/0/1668674513177?e=1671667200&v=beta&t=NQVZY6mrlfdfV9W2xikJn1yg_jMYp83Kw_Q7pmtbYvs) 
 
-![Screen Shot](./public/image/img-bg.png) 
+![](./public/image/img-bg.png) 
 
 <i>
 I participated in this incredible project by <b>Alura</b> and I am very happy with the result! It is a site where we can register YouTube videos with only the link and the title of the chosen video.
