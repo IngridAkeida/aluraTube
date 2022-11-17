@@ -3,7 +3,7 @@
   <h1 text-align="center">AluraTube</h1>
 </div>
 
-## About The Project
+## About The Project 
 
 <i>
 I participated in this incredible project by <b>Alura</b> and I am very happy with the result! It is a site where we can register YouTube videos with only the link and the title of the chosen video.
@@ -12,6 +12,8 @@ To carry out the project, we used FrontEnd and backEnd concepts where it was pos
 This incredible project was developed by [Mario Souto](https://github.com/omariosouto) and mentored together with [Nayanne Batista](https://github.com/NayanneBatista) and [Paulo Silveira](https://github.com/peas).
 
 </i>
+
+## Access the project [here](https://salvemeuvideo.netlify.app/).
 
 
 <div align="center">
