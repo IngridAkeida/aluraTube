@@ -12,7 +12,7 @@ function Timeline({ searchValue, ...props }) {
 
       {playlistNames.map((playlistName)=>{
         
-        const videos = props.lists[playlistName];
+        const videos = props.playlists[playlistName];
         //console.log(videos);
         return (
           
