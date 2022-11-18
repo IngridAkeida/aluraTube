@@ -7,7 +7,7 @@
 
 <i>
 I participated in this incredible project by <b>Alura</b> and I am very happy with the result! It is a site where we can register YouTube videos with only the link and the title of the chosen video.
-To carry out the project, we used FrontEnd and backEnd concepts where it was possible to work with a Supabase database (Firebase open source) for storage.
+To carry out the project, we used FrontEnd and backEnd concepts where it was possible to work with a Supabase database for storage.
 
 This incredible project was developed by [Mario Souto](https://github.com/omariosouto) and mentored together with [Nayanne Batista](https://github.com/NayanneBatista) and [Paulo Silveira](https://github.com/peas).
 
