@@ -37,10 +37,6 @@ This incredible project was developed by [Mario Souto](https://github.com/omario
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="50" height="50"/> 
   </a> 
 
-<a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-<img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> 
-</a> 
-
 <a href="https://supabase.com/" target="_blank" rel="noreferrer"> 
     <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/299/square_480/supabase-logo-icon_1.png" alt="supabase" width="50" height="50"/> 
   </a>
