@@ -23,6 +23,7 @@ const StyledSearch = styled.div`
     cursor: pointer;
     border: none;
     background-color: ${({ theme }) => theme.backgroundLevel2};
+    color: ${({ theme }) => theme.textColorBase};
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
     border-left: 1px solid ${({ theme }) => theme.borderBase};
     width: 40px;
