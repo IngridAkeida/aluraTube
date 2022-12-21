@@ -99,17 +99,19 @@ function RegisterVideo(){
           </button>
 
           <input 
-            placeholder='titulo do video' 
+            placeholder='Titulo do video' 
             name='titulo'
             value={formRegister.values.titulo} 
             onChange={formRegister.handlechange}
           />
+
           <input 
             placeholder='URL' 
             name='url'
             value={formRegister.values.url}
             onChange={formRegister.handlechange}
-          />
+          />         
+
           <button type='submit' >
             Cadastrar
           </button>
